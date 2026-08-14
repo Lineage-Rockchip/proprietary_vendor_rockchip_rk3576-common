@@ -1,0 +1,68 @@
+#! /system/bin/sh
+
+MARK=/data/local/symbol_thirdpart_apks_installed
+PKGS=/system/preinstall/
+
+tinymix -D 1 30 0
+VAR=$(blkid -s UUID /dev/block/sda*)
+VAR1=${VAR#*\"}
+UUID=${VAR1%\"*}
+USBPKGS=/mnt/media_rw/$UUID/preinstall/
+if [ ! -e $USBPKGS ] ; then
+	echo "do nothing"
+	else
+	    busybox find $USBPKGS -name "*\.apk" -exec sh /system/bin/pm install -r {} \;    
+fi
+if [ ! -e $MARK ]; then
+echo "booting the first time, so pre-install some APKs."
+wm density 320
+settings put global device_name RK3576
+settings put system screen_off_timeout 2147483647
+#settings put global  development_settings_enabled 1
+#setprop persist.internet_adb_enable 1
+
+#settings put global zen_mode 1
+settings put secure user_setup_complete 1
+settings put secure tv_user_setup_complete 1
+settings put global captive_portal_mode 0
+
+#settings put global transition_animation_scale 0.5
+#settings put global wifi_scan_always_enabled 1
+settings put secure show_ime_with_hard_keyboard 1
+
+
+# User setup complete
+settings put global device_provisioned 1
+
+# Disable Play Protect
+settings put global package_verifier_enable 0
+settings put global package_verifier_user_consent -1
+settings put global upload_apk_enable 0
+settings put secure assist_structure_enabled 0
+settings put secure accessibility_shortcut_enabled 0
+settings put secure assist_screenshot_enabled 0
+
+sleep 5
+
+busybox find $PKGS -name "*\.apk" -exec sh /system/bin/pm install -g {} \;
+
+setprop persist.sys.installfinish 1
+am broadcast -a android.intent.action.PACKAGE_CHANGED
+
+
+# for app permission
+pm grant com.apkpure.aegon android.permission.READ_EXTERNAL_STORAGE
+pm grant com.apkpure.aegon android.permission.WRITE_EXTERNAL_STORAGE
+pm grant com.apkpure.aegon android.permission.READ_PHONE_STATE
+pm grant com.hcy.wallpaper android.permission.READ_EXTERNAL_STORAGE
+pm grant com.hcy.wallpaper android.permission.WRITE_EXTERNAL_STORAGE
+pm grant com.hcy.wallpaper android.permission.READ_MEDIA_IMAGES
+
+
+touch $MARK
+echo "OK, installation complete."  > /dev/console
+
+fi
+
+#am broadcast  -a com.android.PreInstall -e apk_install true
+
