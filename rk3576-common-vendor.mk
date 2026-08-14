@@ -479,7 +479,6 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/android.hardware.usb.gadget-service.rockchip.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb.gadget-service.rockchip.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/android.hardware.weaver-service.optee.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.weaver-service.optee.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/android.hardware.wifi-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.wifi-service.rc \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/boringssl_self_test.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/boringssl_self_test.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hostapd.android.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hostapd.android.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hw/init.box.samba.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.box.samba.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hw/init.connectivity.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.connectivity.rc \
@@ -501,9 +500,6 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/power-aidl-rockchip.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/power-aidl-rockchip.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/rockchip.hardware.outputmanager@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rockchip.hardware.outputmanager@1.0-service.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/rockchip.hardware.rockit.hw@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rockchip.hardware.rockit.hw@1.0-service.rc \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/vendor_flash_recovery.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor_flash_recovery.rc \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/vndservicemanager.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vndservicemanager.rc \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/mkshrc:$(TARGET_COPY_OUT_VENDOR)/etc/mkshrc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/pq_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/pq_config.json \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/pq_setting_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/pq_setting_config.json \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
@@ -572,68 +568,37 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/android.hardware.camera.provider-V1-external-impl-rk.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.camera.provider-V1-external-impl-rk.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/arm.graphics-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/arm.graphics-V5-ndk.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/camera.device-external-impl-rk.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device-external-impl-rk.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/camera.device@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@1.0-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/camera.device@3.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.2-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/camera.device@3.3-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.3-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/camera.device@3.4-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.4-external-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/camera.device@3.4-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.4-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/camera.device@3.5-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.5-external-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/camera.device@3.5-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.5-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/camera.device@3.6-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera.device@3.6-external-impl.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/egl/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLES_mali.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/android.hardware.audio.effect@7.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.audio.effect@7.0-impl.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/android.hardware.audio@7.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.audio@7.1-impl.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/android.hardware.bluetooth@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.bluetooth@1.0-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.camera.provider@2.4-impl.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/android.hardware.graphics.allocator-V1-arm.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.allocator-V1-arm.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/android.hardware.graphics.allocator-V1-bifrost.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.allocator-V1-bifrost.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-bifrost.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.graphics.mapper@4.0-impl-bifrost.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/android.hardware.tv.input@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/android.hardware.tv.input@1.0-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/audio.bluetooth.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.bluetooth.default.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/audio.primary.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.default.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/audio.primary.rk30board.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.rk30board.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/audio.r_submix.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.r_submix.default.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/audio.stub.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.stub.default.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/audio.usb.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.usb.default.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/audio.usbv2.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.usbv2.default.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/camera.rk30board.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.rk30board.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/gralloc.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gralloc.default.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/hdmi_cec.rk30board.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/hdmi_cec.rk30board.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/hdmi_connection.rk30board.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/hdmi_connection.rk30board.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/hw_output.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/hw_output.default.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/hwcomposer.rk30board.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/hwcomposer.rk30board.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/libanr.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/libanr.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/local_time.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/local_time.default.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/rockchip.hardware.outputmanager@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/rockchip.hardware.outputmanager@1.0-impl.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/hw/vulkan.rk3576.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.rk3576.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/libalsautils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libalsautils.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/libalsautilsv2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libalsautilsv2.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libasc_dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libasc_dec.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libbaseparameter.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbaseparameter.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/libbluetooth_audio_session.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbluetooth_audio_session.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libbt-vendor-aic.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-vendor-aic.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libbt-vendor-realtek.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-vendor-realtek.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libbt-vendor-seekwave.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-vendor-seekwave.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbt-vendor.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/libcodec2_hidl_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_hidl_plugin.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libcodec2_rk_component.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_rk_component.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libcodec2_rk_store.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcodec2_rk_store.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/libdrm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdrm.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/libeffects.so:$(TARGET_COPY_OUT_VENDOR)/lib/libeffects.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libgpudataproducer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgpudataproducer.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libgralloc_priv_omx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgralloc_priv_omx.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libhdr_params_parser.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdr_params_parser.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libhwjpeg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhwjpeg.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libiep.so:$(TARGET_COPY_OUT_VENDOR)/lib/libiep.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/libmediautils_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmediautils_vendor.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/libmemunreachable.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmemunreachable.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libmpp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmpp.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/libnbaio_mono.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnbaio_mono.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libpq.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpq.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/libreference-ril.so:$(TARGET_COPY_OUT_VENDOR)/lib/libreference-ril.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/librga.so:$(TARGET_COPY_OUT_VENDOR)/lib/librga.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/libril.so:$(TARGET_COPY_OUT_VENDOR)/lib/libril.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/librilutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/librilutils.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/librkaiq.so:$(TARGET_COPY_OUT_VENDOR)/lib/librkaiq.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/librkhwpq.so:$(TARGET_COPY_OUT_VENDOR)/lib/librkhwpq.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/librkisp.so:$(TARGET_COPY_OUT_VENDOR)/lib/librkisp.so \
@@ -642,70 +607,37 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/librkwifi-ctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib/librkwifi-ctrl.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/librockit_hw_hidl@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/librockit_hw_hidl@1.0.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libsculptor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsculptor.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/libstagefright_aidl_bufferpool2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_aidl_bufferpool2.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/libstagefright_bufferpool@2.0.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_bufferpool@2.0.1.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libsync_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsync_vendor.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libteec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libteec.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libtinyalsa_iec958.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinyalsa_iec958.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/libtinyalsav2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinyalsav2.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libvdpp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvdpp.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/libvibratorutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvibratorutils.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libwifi-hal-aic.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-hal-aic.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libwifi-hal-bcm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-hal-bcm.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libwifi-hal-bes.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-hal-bes.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libwifi-hal-rtk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-hal-rtk.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libwifi-hal-skw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-hal-skw.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/libwpa_client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwpa_client.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/mediadrm/libdrmclearkeyplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/mediadrm/libdrmclearkeyplugin.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/optee_armtz/0b82bae5-0cd0-49a5-9521-516dba9c43ba.ta:$(TARGET_COPY_OUT_VENDOR)/lib/optee_armtz/0b82bae5-0cd0-49a5-9521-516dba9c43ba.ta \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/optee_armtz/258be795-f9ca-40e6-a869-9ce6886c5d5d.ta:$(TARGET_COPY_OUT_VENDOR)/lib/optee_armtz/258be795-f9ca-40e6-a869-9ce6886c5d5d.ta \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/optee_armtz/481a57df-aec8-47ad-92f5-eb9fc24f64a6.ta:$(TARGET_COPY_OUT_VENDOR)/lib/optee_armtz/481a57df-aec8-47ad-92f5-eb9fc24f64a6.ta \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/rockchip.hardware.outputmanager@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/rockchip.hardware.outputmanager@1.0.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/rockchip.hardware.rockit.hw@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/rockchip.hardware.rockit.hw@1.0.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/soundfx/libaudiopreprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libaudiopreprocessing.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/soundfx/libbundlewrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libbundlewrapper.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/soundfx/libdownmix.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libdownmix.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/soundfx/libdynproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libdynproc.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/soundfx/libeffectproxy.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libeffectproxy.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/soundfx/libhapticgenerator.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libhapticgenerator.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/soundfx/libldnhncr.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libldnhncr.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/soundfx/libreverbwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libreverbwrapper.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/soundfx/libvisualizer.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libvisualizer.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/android.hardware.camera.provider-V1-external-impl-rk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.camera.provider-V1-external-impl-rk.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/arm.graphics-V5-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/arm.graphics-V5-ndk.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/camera.device-external-impl-rk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device-external-impl-rk.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/camera.device-internal-impl-rk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device-internal-impl-rk.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/camera.device@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@1.0-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/camera.device@3.2-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.2-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/camera.device@3.3-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.3-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/camera.device@3.4-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.4-external-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/camera.device@3.4-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.4-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/camera.device@3.5-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.5-external-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/camera.device@3.5-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.5-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/camera.device@3.6-external-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera.device@3.6-external-impl.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/egl/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLES_mali.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/android.hardware.audio.effect@7.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio.effect@7.0-impl.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/android.hardware.audio@7.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.audio@7.1-impl.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.bluetooth@1.0-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.camera.provider@2.4-impl.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/android.hardware.graphics.allocator-V1-arm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.allocator-V1-arm.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/android.hardware.graphics.allocator-V1-bifrost.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.allocator-V1-bifrost.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-bifrost.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.graphics.mapper@4.0-impl-bifrost.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/android.hardware.tv.input@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/android.hardware.tv.input@1.0-impl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/audio.bluetooth.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.bluetooth.default.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/audio.primary.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.default.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/audio.primary.rk30board.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.rk30board.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/audio.r_submix.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.r_submix.default.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/audio.stub.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.stub.default.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/audio.usb.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.usb.default.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/audio.usbv2.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.usbv2.default.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/camera.rk30board.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/camera.rk30board.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/gralloc.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gralloc.default.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/hdmi_cec.rk30board.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/hdmi_cec.rk30board.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/hdmi_connection.rk30board.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/hdmi_connection.rk30board.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/hw_output.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/hw_output.default.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/hwcomposer.rk30board.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/hwcomposer.rk30board.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/local_time.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/local_time.default.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/rockchip.hardware.outputmanager@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/rockchip.hardware.outputmanager@1.0-impl.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/hw/vulkan.rk3576.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.rk3576.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libRkTeeGatekeeper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRkTeeGatekeeper.so \
@@ -722,38 +654,22 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libRksoft_attestation_cert.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRksoft_attestation_cert.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libRksoftkeymasterdevice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libRksoftkeymasterdevice.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/lib_Rk_keymaster_keymint_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_Rk_keymaster_keymint_utils.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libalsautils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalsautils.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libalsautilsv2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalsautilsv2.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libasc_dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libasc_dec.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libbaseparameter.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbaseparameter.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libbinderdebug.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbinderdebug.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libbluetooth_audio_session.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbluetooth_audio_session.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libbt-vendor-aic.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-vendor-aic.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libbt-vendor-realtek.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-vendor-realtek.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libbt-vendor-seekwave.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-vendor-seekwave.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libbt-vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-vendor.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libcodec2_hidl_plugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_hidl_plugin.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libcodec2_rk_component.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_rk_component.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libcodec2_rk_store.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_rk_store.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libcppbor_external.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcppbor_external.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libdrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrm.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libeffects.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libeffects.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libgpudataproducer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpudataproducer.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libgralloc_priv_omx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgralloc_priv_omx.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libhdr_params_parser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_params_parser.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libhwjpeg.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhwjpeg.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libiep.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libiep.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libkeymaster4support.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeymaster4support.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libkeystore-engine-wifi-hidl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libkeystore-engine-wifi-hidl.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libmediautils_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmediautils_vendor.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libmemunreachable.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmemunreachable.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libmpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmpp.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libnbaio_mono.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnbaio_mono.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libpq.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libpq.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libreference-ril.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libreference-ril.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/librga.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librga.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libril.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/librilutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librilutils.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/librkaiq.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librkaiq.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/librkhwpq.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librkhwpq.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/librkisp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librkisp.so \
@@ -761,15 +677,11 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/librkswpq.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librkswpq.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/librkwifi-ctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librkwifi-ctrl.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libsculptor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsculptor.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libstagefright_aidl_bufferpool2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_aidl_bufferpool2.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libstagefright_bufferpool@2.0.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_bufferpool@2.0.1.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libsync_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsync_vendor.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libteec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libteec.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libtinyalsa_iec958.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyalsa_iec958.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libtinyalsav2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyalsav2.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libvdpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvdpp.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libvendor_storage.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvendor_storage.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libvibratorutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvibratorutils.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libwifi-hal-aic.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal-aic.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libwifi-hal-bcm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal-bcm.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libwifi-hal-bes.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal-bes.so \
@@ -777,18 +689,7 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libwifi-hal-skw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal-skw.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libwifi-hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwifi-hal.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libwpa_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwpa_client.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/libz_stable.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libz_stable.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/mediadrm/libdrmclearkeyplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/mediadrm/libdrmclearkeyplugin.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib64/rockchip.hardware.outputmanager@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/rockchip.hardware.outputmanager@1.0.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/soundfx/libaudiopreprocessing.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libaudiopreprocessing.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/soundfx/libbundlewrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libbundlewrapper.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/soundfx/libdownmix.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libdownmix.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/soundfx/libdynproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libdynproc.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/soundfx/libeffectproxy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libeffectproxy.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/soundfx/libhapticgenerator.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libhapticgenerator.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/soundfx/libldnhncr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libldnhncr.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/soundfx/libreverbwrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libreverbwrapper.so \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib64/soundfx/libvisualizer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libvisualizer.so \
     vendor/rockchip/rk3576-common/proprietary/vendor/usr/idc/CMIOT_REMOTE.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/CMIOT_REMOTE.idc \
     vendor/rockchip/rk3576-common/proprietary/vendor/usr/keylayout/27330000_pwm.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/27330000_pwm.kl \
     vendor/rockchip/rk3576-common/proprietary/vendor/usr/keylayout/CMIOT_REMOTE.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/CMIOT_REMOTE.kl \
