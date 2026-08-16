@@ -2,4 +2,4 @@ service vendor.power-aidl-rockchip /vendor/bin/hw/android.hardware.power-service
     class hal
     user root
     group system
-    capabilities DAC_OVERRIDE
+    capabilities DAC_OVERRIDE SYS_ADMIN

@@ -13,7 +13,7 @@ on post-fs-data
     chmod 0666 /dev/teepriv0
 
     mkdir /data/vendor/logs 0755 root shell
-    mkdir /data/vendor/audio 0755 system system
+    mkdir /data/vendor/audio 0755 audioserver audioserver
     mkdir /data/vendor/camera 0755 cameraserver cameraserver
 
 on init
@@ -130,6 +130,10 @@ on boot
     chown system system /sys/class/backlight/rk28_bl/brightness
     chown system system /sys/class/backlight/backlight/brightness
     
+    #add for cooling fan
+    chmod 0666 /sys/class/fan/mode
+    chmod 0666 /sys/class/fan/level
+    chmod 0666 /sys/class/fan/enable
     # for hdmi
     chown root system /sys/class/display/HDMI/enable
     chown root system /sys/class/display/HDMI/mode
@@ -174,24 +178,24 @@ on boot
     chmod 0664 /sys/class/leds/net-green/brightness
     chown system system /sys/class/leds/net-red/brightness
     chmod 0664 /sys/class/leds/net-red/brightness
-    chown system system /sys/class/leds/led_r/brightness
-    chown system system /sys/class/leds/led_r/trigger
-    chown system system /sys/class/leds/led_r/timer
-    chmod 0664 /sys/class/leds/led_r/brightness
-    chmod 0664 /sys/class/leds/led_r/trigger
-    chmod 0664 /sys/class/leds/led_r/timer
-    chown system system /sys/class/leds/led_g/brightness
-    chown system system /sys/class/leds/led_g/trigger
-    chown system system /sys/class/leds/led_g/timer
-    chmod 0664 /sys/class/leds/led_g/brightness
-    chmod 0664 /sys/class/leds/led_g/trigger
-    chmod 0664 /sys/class/leds/led_g/timer
-    chown system system /sys/class/leds/led_b/brightness
-    chown system system /sys/class/leds/led_b/trigger
-    chown system system /sys/class/leds/led_b/timer
-    chmod 0664 /sys/class/leds/led_b/brightness
-    chmod 0664 /sys/class/leds/led_b/trigger
-    chmod 0664 /sys/class/leds/led_b/timer
+    chown system system /sys/class/leds/red_led/brightness
+    chown system system /sys/class/leds/red_led/trigger
+    chown system system /sys/class/leds/red_ledr/timer
+    chmod 0664 /sys/class/leds/red_led/brightness
+    chmod 0664 /sys/class/leds/red_led/trigger
+    chmod 0664 /sys/class/leds/red_led/timer
+    chown system system /sys/class/leds/green_led/brightness
+    chown system system /sys/class/leds/green_led/trigger
+    chown system system /sys/class/leds/green_led/timer
+    chmod 0664 /sys/class/leds/green_led/brightness
+    chmod 0664 /sys/class/leds/green_led/trigger
+    chmod 0664 /sys/class/leds/green_led/timer
+    chown system system /sys/class/leds/blue_led/brightness
+    chown system system /sys/class/leds/blue_led/trigger
+    chown system system /sys/class/leds/blue_led/timer
+    chmod 0664 /sys/class/leds/blue_led/brightness
+    chmod 0664 /sys/class/leds/blue_led/trigger
+    chmod 0664 /sys/class/leds/blue_led/timer
 
     chown root system /sys/class/graphics/fb0/map
     chmod 0664 /sys/class/graphics/fb0/map
@@ -287,13 +291,6 @@ on property:persist.abc_switch=1
     start abc
 on property:persist.abc_switch=0
     stop abc
-
-##$_rbox_$_modify_$_shenzhenyi_20160312
-##$_rbox_$_modify_$_begin
-service displayd /system/bin/displayd
-    class core
-    socket displayd stream 0760 system system
-##$_rbox_$_modify_$_end
 
 ##$_rbox_$_modify_$_chenzhi_20120309
 ##$_rbox_$_modify_$_begin

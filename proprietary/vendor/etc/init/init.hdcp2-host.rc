@@ -7,5 +7,6 @@ service hdcp2_hdmi /vendor/bin/hdcp2_tx_rx 1
     class core
     oneshot
     disabled
+    user root
     group root system net_admin net_bt
     capabilities DAC_OVERRIDE

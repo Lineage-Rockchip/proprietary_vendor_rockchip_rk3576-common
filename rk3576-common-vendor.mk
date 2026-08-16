@@ -6,11 +6,10 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/rockchip/rk3576-common
 
 PRODUCT_COPY_FILES += \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/aipq_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/aipq_config.json \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/bluetooth/bt_vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor.conf \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/bluetooth/rtkbt.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/rtkbt.conf \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/bluetooth/skwbt.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/skwbt.conf \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/bluetooth/sv6160.nvbin:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/sv6160.nvbin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/bluetooth/sv6160lite.nvbin:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/sv6160lite.nvbin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/bluetooth/sv6316.nvbin:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/sv6316.nvbin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/README.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/README.txt \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/camera3_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera3_profiles.xml \
@@ -28,6 +27,7 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/camera3_profiles_rk3576.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera3_profiles_rk3576.xml \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/camera3_profiles_rk3588.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera3_profiles_rk3588.xml \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/graph_descriptor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/graph_descriptor.xml \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/pre_exposure_param.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/pre_exposure_param.xml \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp1/ar0144_default_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp1/ar0144_default_default.xml \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp1/bg0806_86mc09-l09_trc-2177d6-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp1/bg0806_86mc09-l09_trc-2177d6-01.xml \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp1/gc0403_default_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp1/gc0403_default_default.xml \
@@ -85,14 +85,26 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp1/sc031gs_default_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp1/sc031gs_default_default.xml \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp1/sc132gs_blackvision_f00101a.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp1/sc132gs_blackvision_f00101a.xml \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp1/sc2232_default_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp1/sc2232_default_default.xml \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/CAC_gc05a2_KYT-11210-V2_default/cac2_map_hw_2592x1944.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/CAC_gc05a2_KYT-11210-V2_default/cac2_map_hw_2592x1944.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/CAC_imx415_CMK-OT2022-PX1_IR0147-50IRC-8M-F20/cac2_map_hw_3840x2160.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/CAC_imx415_CMK-OT2022-PX1_IR0147-50IRC-8M-F20/cac2_map_hw_3840x2160.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/CAC_os04a10_CMK-OT1607-FV1_M12-40IRC-4MP-F16/cac2_map_hw_2688x1520.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/CAC_os04a10_CMK-OT1607-FV1_M12-40IRC-4MP-F16/cac2_map_hw_2688x1520.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/CAC_ov16880_KYT-11379-V1_default/cac2_map_hw_4672x3504.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/CAC_ov16880_KYT-11379-V1_default/cac2_map_hw_4672x3504.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/CAC_s5k4h5yb_G1-T-B-s5k_XA-0806B/cac2_map_hw_3280x2464.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/CAC_s5k4h5yb_G1-T-B-s5k_XA-0806B/cac2_map_hw_3280x2464.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/CAC_sc4336_OT01_40IRC_F16/cac2_map_hw_1920x1080.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/CAC_sc4336_OT01_40IRC_F16/cac2_map_hw_1920x1080.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/CAC_sc4336_OT01_40IRC_F16/cac2_map_hw_2560x1440.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/CAC_sc4336_OT01_40IRC_F16/cac2_map_hw_2560x1440.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/CAC_sc4336_OT01_40IRC_F16/cac_map_hw_1920x1080.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/CAC_sc4336_OT01_40IRC_F16/cac_map_hw_1920x1080.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/CAC_sc4336_OT01_40IRC_F16/cac_map_hw_2560x1440.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/CAC_sc4336_OT01_40IRC_F16/cac_map_hw_2560x1440.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/OX03C10.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/OX03C10.json \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/gc05a2_KYT-11210-V2_default.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/gc05a2_KYT-11210-V2_default.json \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/imx415_CMK-OT2022-PX1_IR0147-50IRC-8M-F20.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/imx415_CMK-OT2022-PX1_IR0147-50IRC-8M-F20.json \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/imx464_CMK-OT1980-PX1_SHG102.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/imx464_CMK-OT1980-PX1_SHG102.json \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/imx585_CMK-IMX585-PX1_FH34SRJ-30SCK0.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/imx585_CMK-IMX585-PX1_FH34SRJ-30SCK0.json \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/imx678_FH34SRJ-30S_YG4118.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/imx678_FH34SRJ-30S_YG4118.json \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/os04a10_CMK-OT1607-FV1_M12-40IRC-4MP-F16.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/os04a10_CMK-OT1607-FV1_M12-40IRC-4MP-F16.json \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/os08a10_default_default.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/os08a10_default_default.json \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/ov16880_KYT-11379-V1_default.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/ov16880_KYT-11379-V1_default.json \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/ov50c40_HZGA06_ZE0082C1.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/ov50c40_HZGA06_ZE0082C1.json \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/ox03c10_default_default.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/ox03c10_default_default.json \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/s5k3l8xx_KYT-11097-B-V1_default.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/s5k3l8xx_KYT-11097-B-V1_default.json \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/s5k4h5yb_G1-T-B-s5k_XA-0806B.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/s5k4h5yb_G1-T-B-s5k_XA-0806B.json \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/camera/rkisp2/sc4336_OT01_40IRC_F16.json:$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/sc4336_OT01_40IRC_F16.json \
@@ -113,6 +125,8 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/BCM4359C0-CYW.hcd:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/BCM4359C0-CYW.hcd \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/BCM4359C0.hcd:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/BCM4359C0.hcd \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/BCM4362A2.hcd:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/BCM4362A2.hcd \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/BCM4384A0.hcd:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/BCM4384A0.hcd \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/BT_Firmware.mk:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/BT_Firmware.mk \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/EA6521QF_SEEKWAVE_R00005.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/EA6521QF_SEEKWAVE_R00005.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/EA6521QF_SEEKWAVE_R00005.ini:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/EA6521QF_SEEKWAVE_R00005.ini \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/EA6521QT_SEEKWAVE_R00005.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/EA6521QT_SEEKWAVE_R00005.bin \
@@ -127,7 +141,16 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/RT2870APCard.dat:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/RT2870APCard.dat \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/RT2870STA.dat:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/RT2870STA.dat \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/RT2870STACard.dat:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/RT2870STACard.dat \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/TV_Firmware.mk:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/TV_Firmware.mk \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/SWT6621S_DRAM_SDIO.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/SWT6621S_DRAM_SDIO.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/SWT6621S_IRAM_SDIO.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/SWT6621S_IRAM_SDIO.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/SWT6621S_NV_SDIO.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/SWT6621S_NV_SDIO.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/SWT6621S_NV_SDIO.ini:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/SWT6621S_NV_SDIO.ini \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/SWT6621S_NV_SDIO_ALONE.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/SWT6621S_NV_SDIO_ALONE.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/SWT6621S_NV_SDIO_SHARE.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/SWT6621S_NV_SDIO_SHARE.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/SWT6621S_NV_for_test_alone.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/SWT6621S_NV_for_test_alone.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/SWT6621S_NV_for_test_share.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/SWT6621S_NV_for_test_share.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/SWT6621S_SEEKWAVE_R00001.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/SWT6621S_SEEKWAVE_R00001.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/SWT6621S_SEEKWAVE_R00001.ini:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/SWT6621S_SEEKWAVE_R00001.ini \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/aic_userconfig.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/aic_userconfig.txt \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/aic_userconfig_8800d80.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/aic_userconfig_8800d80.txt \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/aic_userconfig_8800dc.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/aic_userconfig_8800dc.txt \
@@ -151,29 +174,26 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/clm_bcm43752a2_pcie_ag.blob:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/clm_bcm43752a2_pcie_ag.blob \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/clm_syn43711a0.blob:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/clm_syn43711a0.blob \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/clm_syn43756b0.blob:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/clm_syn43756b0.blob \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/clm_syn4384a0.blob:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/clm_syn4384a0.blob \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/config.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/config.txt \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_8800d80.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_8800d80.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_8800d80_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_8800d80_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_8800m_custmsg.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_8800m_custmsg.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_calib_8800dc_h_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_calib_8800dc_h_u02.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_calib_8800dc_hbt_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_calib_8800dc_hbt_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_calib_8800dc_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_calib_8800dc_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_8800dc.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_8800dc.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_8800dc_h_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_8800dc_h_u02.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_8800dc_hbt_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_8800dc_hbt_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_8800dc_ipc.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_8800dc_ipc.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_8800dc_ipc_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_8800dc_ipc_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_8800dc_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_8800dc_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_tbl_8800dc_h_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_tbl_8800dc_h_u02.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_tbl_8800dc_hbt_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_tbl_8800dc_hbt_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_tbl_8800dc_ipc_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_tbl_8800dc_ipc_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_tbl_8800dc_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_tbl_8800dc_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_rf.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_rf.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_rf_8800d80.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_rf_8800d80.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_rf_8800d80_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_rf_8800d80_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_rf_patch_8800dc.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_rf_patch_8800dc.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfwbt.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfwbt.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfwbt_8800d80_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfwbt_8800d80_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fw_RK901.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fw_RK901.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fw_RK901a0.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fw_RK901a0.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fw_RK901a0_apsta.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fw_RK901a0_apsta.bin \
@@ -268,10 +288,13 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fw_patch_u03.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fw_patch_u03.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fw_syn43711a0_sdio.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fw_syn43711a0_sdio.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fw_syn43756b0_pcie.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fw_syn43756b0_pcie.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fw_syn4384a0_pcie.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fw_syn4384a0_pcie.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/lmacfw_rf_8800d80.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/lmacfw_rf_8800d80.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/lmacfw_rf_8800d80_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/lmacfw_rf_8800d80_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/lmacfw_rf_8800dc.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/lmacfw_rf_8800dc.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/md5.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/md5.txt \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/nh660.hcd:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/nh660.hcd \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/nvram.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/nvram.txt \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/nvram_4330.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/nvram_4330.txt \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/nvram_4330_oob.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/nvram_4330_oob.txt \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/nvram_AP6181.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/nvram_AP6181.txt \
@@ -312,6 +335,7 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/nvram_ap6398sv.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/nvram_ap6398sv.txt \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/nvram_ap6452.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/nvram_ap6452.txt \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/nvram_ap6611s.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/nvram_ap6611s.txt \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/nvram_ap6684p.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/nvram_ap6684p.txt \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/nvram_awnb108.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/nvram_awnb108.txt \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/nvram_azw256.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/nvram_azw256.txt \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/nvram_azw372.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/nvram_azw372.txt \
@@ -320,13 +344,34 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/readme.txt:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/readme.txt \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rk903.hcd:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rk903.hcd \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rk903_26M.hcd:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rk903_26M.hcd \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8703as_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8703as_config \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8703as_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8703as_fw \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8703bs_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8703bs_config \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8703bs_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8703bs_fw \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8703cs_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8703cs_config \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8703cs_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8703cs_fw \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723a_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723a_config \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723a_config_addr:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723a_config_addr \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723a_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723a_fw \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723as_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723as_config \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723as_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723as_fw \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723b_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723b_config \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723b_config_2Ant_S0:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723b_config_2Ant_S0 \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723b_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723b_fw \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723bs_VQ0_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723bs_VQ0_config \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723bs_VQ0_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723bs_VQ0_fw \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723bs_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723bs_config \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723bs_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723bs_fw \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723bu_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723bu_config \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723c_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723c_fw \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723cs_0_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723cs_0_config \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723cs_0_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723cs_0_fw \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723cs_cg_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723cs_cg_config \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723cs_cg_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723cs_cg_fw \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723cs_vf_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723cs_vf_config \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723cs_vf_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723cs_vf_fw \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723cs_xx_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723cs_xx_config \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723cs_xx_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723cs_xx_fw \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723d_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723d_config \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723d_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723d_fw \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8723ds_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8723ds_config \
@@ -346,8 +391,8 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8733bs_8723fs_config_vendor:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8733bs_8723fs_config_vendor \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8733bs_8723fs_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8733bs_8723fs_fw \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761a_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761a_config \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761a_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761a_fw \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761at8192er_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761at8192er_fw \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761at8192ee_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761at8192ee_fw \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761at8812ae_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761at8812ae_fw \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761at_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761at_config \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761at_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761at_fw \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761au8192ee_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761au8192ee_fw \
@@ -358,10 +403,14 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761b_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761b_config \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761b_config_vendor:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761b_config_vendor \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761b_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761b_fw \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761bs_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761bs_fw \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761bt_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761bt_config \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761bt_config_vendor:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761bt_config_vendor \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761bt_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761bt_fw \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761c_mx_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761c_mx_config \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761c_mx_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761c_mx_fw \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761cs_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761cs_fw \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761ct_mx_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761ct_mx_config \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8761ct_mx_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8761ct_mx_fw \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8821a_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8821a_config \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8821a_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8821a_fw \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8821as_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8821as_config \
@@ -406,6 +455,10 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8852cs_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8852cs_fw \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8852cu_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8852cu_config \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8852cu_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8852cu_fw \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8852ds_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8852ds_config \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8852ds_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8852ds_fw \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8852du_config:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8852du_config \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/rtl8852du_fw:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rtl8852du_fw \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/ssv6051-sw.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/ssv6051-sw.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/ssv6051-wifi.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/ssv6051-wifi.cfg \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/wifi_efuse_8189e.map:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/wifi_efuse_8189e.map \
@@ -413,7 +466,6 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/wifi_efuse_8723cs.map:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/wifi_efuse_8723cs.map \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/wifi_efuse_8723ds.map:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/wifi_efuse_8723ds.map \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/wifi_efuse_8821cs.map:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/wifi_efuse_8821cs.map \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/fstab.rk30board:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.rk30board \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/fstab_swap.ext1024:$(TARGET_COPY_OUT_VENDOR)/etc/fstab_swap.ext1024 \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/fstab_swap.ext2048:$(TARGET_COPY_OUT_VENDOR)/etc/fstab_swap.ext2048 \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/fstab_swap.ext256:$(TARGET_COPY_OUT_VENDOR)/etc/fstab_swap.ext256 \
@@ -433,23 +485,19 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/android.hardware.usb.gadget-service.rockchip.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb.gadget-service.rockchip.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/android.hardware.weaver-service.optee.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.weaver-service.optee.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hostapd.android.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hostapd.android.rc \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hw/init.box.samba.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.box.samba.rc \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hw/init.connectivity.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.connectivity.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hw/init.mount_all.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mount_all.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hw/init.rk30board.environment.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rk30board.environment.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hw/init.rk30board.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rk30board.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hw/init.rk30board.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rk30board.usb.rc \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hw/init.rk3576.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rk3576.rc \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hw/init.rkai.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rkai.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hw/init.rockchip.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rockchip.rc \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hw/set_cpu_affinity.sh:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/set_cpu_affinity.sh \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hw/set_performance.sh:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/set_performance.sh \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/hwc3-rk.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hwc3-rk.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/init.hdcp2-host.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.hdcp2-host.rc \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/init.rockchip_rkp_factory_service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.rockchip_rkp_factory_service.rc \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/init.rockchip_udc_detector.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.rockchip_udc_detector.rc \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/init.rockchip.akmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.rockchip.akmd.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/init.tee-supplicant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.tee-supplicant.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/init.tune_io.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.tune_io.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/lights-rockchip.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/lights-rockchip.rc \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/memtrack.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/power-aidl-rockchip.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/power-aidl-rockchip.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/rk_audio.service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rk_audio.service.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/rk_bluetooth@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rk_bluetooth@1.0-service.rc \
@@ -458,54 +506,15 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/rk_wifi.service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rk_wifi.service.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/rockchip.hardware.outputmanager@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rockchip.hardware.outputmanager@1.0-service.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/rockchip.hardware.rockit.hw@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rockchip.hardware.rockit.hw@1.0-service.rc \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/init/wait_for_optee.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wait_for_optee.rc \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/pq_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/pq_config.json \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/pq_setting_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/pq_setting_config.json \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model0_NaturalSR540to1080_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_NaturalSR540to1080_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model0_NaturalSR720to4K_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_NaturalSR720to4K_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model0_fd_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_fd_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model0_fe_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_fe_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model0_fs_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_fs_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model0_fsr_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_fsr_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model0_sd_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_sd_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model0_std_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model0_std_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model1_DC1080p_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_DC1080p_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model1_DC540p_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_DC540p_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model1_DC720p_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_DC720p_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model1_IFBlockX5Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_IFBlockX5Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model1_IFBlockX5Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_IFBlockX5Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model1_IFBlockX5Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_IFBlockX5Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model1_NaturalSR1080to4K_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_NaturalSR1080to4K_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model1_fe_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model1_fe_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model2_DC1080p_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_DC1080p_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model2_IFBlockX4Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_IFBlockX4Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model2_IFBlockX4Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_IFBlockX4Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model2_IFBlockX4Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_IFBlockX4Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model2_IFBlockX5Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_IFBlockX5Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model2_IFBlockX5Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_IFBlockX5Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model2_IFBlockX5Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_IFBlockX5Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model2_NaturalSR1080to4K_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model2_NaturalSR1080to4K_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model3_IFBlockX4Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_IFBlockX4Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model3_IFBlockX4Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_IFBlockX4Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model3_IFBlockX4Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_IFBlockX4Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model3_IFBlockX5Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_IFBlockX5Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model3_IFBlockX5Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_IFBlockX5Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model3_IFBlockX5Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_IFBlockX5Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model3_NaturalSR1080to4K_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_NaturalSR1080to4K_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model3_NaturalSR720to1080_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model3_NaturalSR720to1080_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model4_IFBlockX4Stage0_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model4_IFBlockX4Stage0_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model4_IFBlockX4Stage1_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model4_IFBlockX4Stage1_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model4_IFBlockX4Stage2_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model4_IFBlockX4Stage2_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model4_NaturalSR1080to4K_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model4_NaturalSR1080to4K_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model4_NaturalSR720to1080_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model4_NaturalSR720to1080_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model5_NaturalSR1080to4K_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model5_NaturalSR1080to4K_rknn200_rk3576.bin \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/rkaipq_mssr_model5_NaturalSR720to1080_rknn200_rk3576.bin:$(TARGET_COPY_OUT_VENDOR)/etc/rkaipq_mssr_model5_NaturalSR720to1080_rknn200_rk3576.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/rockchip_forbid_packages.xml:$(TARGET_COPY_OUT_VENDOR)/etc/rockchip_forbid_packages.xml \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/seccomp_policy/android.hardware.media.c2@1.1-seccomp_policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.1-seccomp_policy \
-    vendor/rockchip/rk3576-common/proprietary/vendor/etc/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/seccomp_policy/rockit.vendor.base.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/rockit.vendor.base.policy \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/session.xml:$(TARGET_COPY_OUT_VENDOR)/etc/session.xml \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/uvc_enc_cfg.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uvc_enc_cfg.conf \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/vop_base_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/vop_base_config.json \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/wifi/p2p_supplicant_rtk.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_rtk.conf \
@@ -521,26 +530,13 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/firmware/preisp_imx327.rkl:$(TARGET_COPY_OUT_VENDOR)/firmware/preisp_imx327.rkl \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/optee_armtz/0b82bae5-0cd0-49a5-9521-516dba9c43ba.ta:$(TARGET_COPY_OUT_VENDOR)/lib/optee_armtz/0b82bae5-0cd0-49a5-9521-516dba9c43ba.ta \
     vendor/rockchip/rk3576-common/proprietary/vendor/lib/optee_armtz/258be795-f9ca-40e6-a869-9ce6886c5d5d.ta:$(TARGET_COPY_OUT_VENDOR)/lib/optee_armtz/258be795-f9ca-40e6-a869-9ce6886c5d5d.ta \
-    vendor/rockchip/rk3576-common/proprietary/vendor/lib/optee_armtz/481a57df-aec8-47ad-92f5-eb9fc24f64a6.ta:$(TARGET_COPY_OUT_VENDOR)/lib/optee_armtz/481a57df-aec8-47ad-92f5-eb9fc24f64a6.ta \
-    vendor/rockchip/rk3576-common/proprietary/vendor/usr/idc/CMIOT_REMOTE.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/CMIOT_REMOTE.idc \
-    vendor/rockchip/rk3576-common/proprietary/vendor/usr/keylayout/27330000_pwm.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/27330000_pwm.kl \
-    vendor/rockchip/rk3576-common/proprietary/vendor/usr/keylayout/CMIOT_REMOTE.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/CMIOT_REMOTE.kl \
-    vendor/rockchip/rk3576-common/proprietary/vendor/usr/keylayout/HiRemote.idc:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/HiRemote.idc \
-    vendor/rockchip/rk3576-common/proprietary/vendor/usr/keylayout/HiRemote.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/HiRemote.kl \
-    vendor/rockchip/rk3576-common/proprietary/vendor/usr/keylayout/Vendor_0416_Product_0300.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0416_Product_0300.kl \
-    vendor/rockchip/rk3576-common/proprietary/vendor/usr/keylayout/fd8b0030_pwm.idc:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fd8b0030_pwm.idc \
-    vendor/rockchip/rk3576-common/proprietary/vendor/usr/keylayout/fd8b0030_pwm.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fd8b0030_pwm.kl \
-    vendor/rockchip/rk3576-common/proprietary/vendor/usr/keylayout/fe6e0030_pwm.idc:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fe6e0030_pwm.idc \
-    vendor/rockchip/rk3576-common/proprietary/vendor/usr/keylayout/fe6e0030_pwm.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fe6e0030_pwm.kl \
-    vendor/rockchip/rk3576-common/proprietary/vendor/usr/keylayout/fe700030_pwm.idc:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fe700030_pwm.idc \
-    vendor/rockchip/rk3576-common/proprietary/vendor/usr/keylayout/fe700030_pwm.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fe700030_pwm.kl \
-    vendor/rockchip/rk3576-common/proprietary/vendor/usr/keylayout/vendor.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/vendor.kl \
-    vendor/rockchip/rk3576-common/proprietary/vendor/usr/keylayout/virtual-remote.idc:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/virtual-remote.idc
+    vendor/rockchip/rk3576-common/proprietary/vendor/lib/optee_armtz/481a57df-aec8-47ad-92f5-eb9fc24f64a6.ta:$(TARGET_COPY_OUT_VENDOR)/lib/optee_armtz/481a57df-aec8-47ad-92f5-eb9fc24f64a6.ta
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-V1-external-impl-rk \
     arm.graphics-V5-ndk \
     camera.device-external-impl-rk \
+    camera.device-internal-impl-rk \
     libGLES_mali \
     android.hardware.audio@7.1-impl \
     android.hardware.bluetooth@1.0-impl \
@@ -553,46 +549,10 @@ PRODUCT_PACKAGES += \
     hdmi_connection.rk30board \
     hw_output.default \
     hwcomposer.rk30board \
+    power.default \
     rockchip.hardware.outputmanager@1.0-impl \
+    vibrator.default \
     vulkan.rk3576 \
-    libasc_dec \
-    libbaseparameter \
-    libbt-vendor-aic \
-    libbt-vendor-realtek \
-    libbt-vendor-seekwave \
-    libbt-vendor \
-    libcodec2_rk_component \
-    libcodec2_rk_store \
-    libgpudataproducer \
-    libgralloc_priv_omx \
-    libhdr_params_parser \
-    libhwjpeg \
-    libiep \
-    libmpp \
-    libpq \
-    librga \
-    librkaiq \
-    librkhwpq \
-    librkisp \
-    librknnrt \
-    librkswpq \
-    librkwifi-ctrl \
-    libsculptor \
-    libsync_vendor \
-    libteec \
-    libtinyalsa_iec958 \
-    libvdpp \
-    libwifi-hal-aic-rockchip \
-    libwifi-hal-bcm-rockchip \
-    libwifi-hal-bes-rockchip \
-    libwifi-hal-rtk-rockchip \
-    libwifi-hal-skw-rockchip \
-    libwpa_client \
-    rockchip.hardware.outputmanager@1.0 \
-    libanr \
-    librockit_hw_hidl@1.0 \
-    rockchip.hardware.rockit.hw@1.0 \
-    camera.device-internal-impl-rk \
     libRkTeeGatekeeper \
     libRkTeeKeymaster \
     libRkTeeWeaver \
@@ -607,9 +567,39 @@ PRODUCT_PACKAGES += \
     libRksoft_attestation_cert \
     libRksoftkeymasterdevice \
     lib_Rk_keymaster_keymint_utils \
+    lib_sensor_listener_local \
+    libbaseparameter \
+    libbt-vendor-aic \
+    libbt-vendor-realtek \
+    libbt-vendor-seekwave \
+    libbt-vendor \
+    libcodec2_rk_component \
+    libcodec2_rk_store \
     libcppbor_external_rk \
-    libvendor_storage \
+    libgpudataproducer \
+    libgralloc_priv_omx \
+    libhdr_params_parser \
+    libhwjpeg \
+    libiep_vehicle \
+    libmemtrack-rockchip \
+    libmpp \
+    librga \
+    librkaiq \
+    librkisp \
+    librkwifi-ctrl \
+    librockit_hw_hidl@1.0 \
+    libsync_vendor \
+    libteec \
+    libtinyalsa_iec958 \
+    libwifi-hal-aic-rockchip \
+    libwifi-hal-bcm-rockchip \
+    libwifi-hal-bes-rockchip \
+    libwifi-hal-rtk-rockchip \
+    libwifi-hal-skw-rockchip \
     libwifi-hal \
+    libwpa_client \
+    rockchip.hardware.outputmanager@1.0 \
+    rockchip.hardware.rockit.hw@1.0 \
     android.hardware.camera.provider-V1-external-service.xml \
     android.hardware.camera.provider-V1-service.xml \
     android.hardware.gatekeeper-service.optee.xml \
@@ -625,6 +615,7 @@ PRODUCT_PACKAGES += \
     lights-rockchip.xml \
     manifest_allocator.xml \
     manifest_media_c2_V1_1.xml \
+    memtrack.xml \
     power-aidl-rockchip.xml \
     rk_hdmi.cec.xml \
     rk_hdmi.connection.xml \
@@ -633,6 +624,7 @@ PRODUCT_PACKAGES += \
     rk_wifi.supplicant.xml \
     rockchip.hardware.outputmanager@1.0-service.xml \
     rockchip.hardware.rockit.hw@1.0-service.xml \
+    akmd \
     flash_img \
     gpu_counter_producer-rockchip \
     hdcp2_tx_rx \
@@ -646,6 +638,7 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.rockchip \
     android.hardware.lights-service.rockchip \
     android.hardware.media.c2@1.1-service \
+    android.hardware.memtrack-service.rockchip \
     android.hardware.power-service.rockchip \
     android.hardware.security.keymint-service.optee \
     android.hardware.thermal-service.rockchip \
@@ -658,20 +651,12 @@ PRODUCT_PACKAGES += \
     hostapd-rockchip \
     rockchip.hardware.outputmanager@1.0-service \
     rockchip.hardware.rockit.hw@1.0-service \
+    wait_for_optee \
     wpa_supplicant \
     init.insmod \
     media-ctl \
-    preinstall \
-    preinstall.sh.bak \
     read_pcie_info \
-    rk_vendor_storage_tool \
-    rkauth_tool_bin \
-    rkauth_verify_licence \
-    rkdevice_info \
     rkhelper \
-    rkpq_tool_server \
-    rkswpq_demo \
-    rockchip_rkp_factory_extraction_tool \
-    rockchip_udc_detector \
+    saveBaseParameter \
     tee-supplicant \
     v4l2-ctl
