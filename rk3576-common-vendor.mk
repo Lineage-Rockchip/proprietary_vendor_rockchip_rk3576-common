@@ -181,19 +181,24 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_8800d80_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_8800d80_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_8800m_custmsg.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_8800m_custmsg.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_calib_8800dc_h_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_calib_8800dc_h_u02.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_calib_8800dc_hbt_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_calib_8800dc_hbt_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_calib_8800dc_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_calib_8800dc_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_8800dc.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_8800dc.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_8800dc_h_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_8800dc_h_u02.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_8800dc_hbt_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_8800dc_hbt_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_8800dc_ipc.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_8800dc_ipc.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_8800dc_ipc_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_8800dc_ipc_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_8800dc_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_8800dc_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_tbl_8800dc_h_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_tbl_8800dc_h_u02.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_tbl_8800dc_hbt_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_tbl_8800dc_hbt_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_tbl_8800dc_ipc_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_tbl_8800dc_ipc_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_patch_tbl_8800dc_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_patch_tbl_8800dc_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_rf.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_rf.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_rf_8800d80.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_rf_8800d80.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_rf_8800d80_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_rf_8800d80_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfw_rf_patch_8800dc.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfw_rf_patch_8800dc.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfwbt.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfwbt.bin \
+    vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fmacfwbt_8800d80_u02.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fmacfwbt_8800d80_u02.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fw_RK901.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fw_RK901.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fw_RK901a0.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fw_RK901a0.bin \
     vendor/rockchip/rk3576-common/proprietary/vendor/etc/firmware/fw_RK901a0_apsta.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/fw_RK901a0_apsta.bin \
