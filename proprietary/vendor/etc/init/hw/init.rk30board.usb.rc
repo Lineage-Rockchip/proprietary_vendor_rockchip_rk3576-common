@@ -201,6 +201,3 @@ on boot
     write sys/module/usbcore/parameters/initial_descriptor_timeout 500
     # Use USB Gadget HAL
     setprop sys.usb.configfs 2
-
-on property:init.svc.adbd=stopped
-    setprop sys.usb.ffs.ready 0

@@ -1,0 +1,28 @@
+
+on early-init
+    start vendor.box_early_sh
+
+service vendor.box_early_sh /vendor/bin/init.box_early.sh
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service cifsmanager /system/bin/cifsmanager.sh
+     disabled
+     oneshot
+
+service startsamba /system/bin/rksmbd
+    disabled
+    oneshot
+
+on property:sys.rksmbd.start=1
+    start startsamba
+
+service stopsamba /system/bin/stopsamba.sh
+    disabled
+    oneshot
+
+on property:sys.rksmbd.start=0
+    start stopsamba

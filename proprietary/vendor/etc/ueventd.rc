@@ -66,16 +66,8 @@ import /vendor/etc/ueventd.car.rc
 /dev/hidraw0              0660   audio  audio
 
 # for radio
-/dev/ttyUSB0              0660   radio		radio
-/dev/ttyUSB1              0660   radio		radio
-/dev/ttyUSB2              0660   radio		radio
-/dev/ttyUSB3              0660   radio		radio
-/dev/ttyUSB4              0660   radio		radio
-/dev/ttyUSB5              0660   radio		radio
-/dev/ttyUSB6              0660   radio		radio
-/dev/ttyUSB7              0660   radio		radio
-/dev/ttyUSB8              0660   radio		radio
-/dev/ttyUSB9              0660   radio		radio
+/dev/ttyUSB*              0660   system     radio
+/dev/cdc-wdm0             0660   system     radio
 
 # for mali-t764
 /dev/mali0           	  0666   system   	 system
@@ -183,14 +175,45 @@ import /vendor/etc/ueventd.car.rc
 #for autopq function
 /dev/block/by-name/autopq 0660 system system
 
-/dev/cpu_state 0666 system system
-/dev/chip_state 0666 system system
-/dev/i2c-1 0660 system system
+/dev/cpu_state       0666   system     system
+/dev/chip_state      0666   system     system
+/dev/i2c-1           0660   system     system
+/dev/i2c-2           0660   system     system
+/dev/i2c-3           0660   system     system
+/dev/rtc0            0660   system     system
+/dev/spidev*         0660   system     system
+/dev/ttyS3           0660   system     system
+/dev/ttyS4           0660   system     system
+/dev/ttyS5           0660   system     system
+/dev/ttyS6           0660   system     system
+/dev/ttyS7           0660   system     system
+/dev/ttyS8           0660   system     system
+/dev/watchdog        0660   system     system
+
+#for gpio
+/sys/class/gpio/gpio*           active_low  0660 system system
+/sys/class/gpio/gpio*           direction   0660 system system
+/sys/class/gpio/gpio*           edge        0660 system system
+/sys/class/gpio/gpio*           value       0660 system system
+
+#for pwm
+/sys/class/pwm/pwmchip*         export      0660 system system
+/sys/class/pwm/pwmchip*         unexport    0660 system system
+/sys/class/pwm/pwmchip*         pwm0/enable      0660 system system
+/sys/class/pwm/pwmchip*         pwm0/period      0660 system system
+/sys/class/pwm/pwmchip*         pwm0/duty_cycle  0660 system system
+/sys/class/pwm/pwmchip*         pwm0/polarity    0660 system system
+
+#for rtc
+/sys/class/rtc/rtc0             date        0660 system system
+/sys/class/rtc/rtc0             time        0660 system system
+/sys/class/rtc/rtc0             wakealarm   0660 system system
+
 #for ovr
-/dev/ovr0		  0664   system          system
+/dev/ovr0            0664   system     system
 
 #for rk_isp1
-/dev/v4l-subdev*          0666   media      camera
+/dev/v4l-subdev*     0666   media      camera
 
 /dev/video*          0660   media      camera
 /dev/rk803           0660   media      camera

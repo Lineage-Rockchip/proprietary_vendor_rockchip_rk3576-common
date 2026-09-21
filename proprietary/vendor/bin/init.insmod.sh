@@ -11,9 +11,9 @@ system_modules="/system_dlkm/lib/modules/modules.load"
 if [ -f $system_modules ]; then
   while IFS= read -r name
   do
-	if [ -f /system_dlkm/lib/modules/$name ]; then
-          insmod /system_dlkm/lib/modules/$name
-        fi
+  if [ -f /system_dlkm/lib/modules/$name ]; then
+    insmod /system_dlkm/lib/modules/$name
+  fi
   done < $system_modules
 fi
 
@@ -22,13 +22,13 @@ vendor_modules="/vendor_dlkm/lib/modules/modules.load"
 if [ -f $vendor_modules ]; then
   while IFS= read -r name
   do
-	if [ -f /vendor_dlkm/lib/modules/$name ]; then
-		if grep -q $name $wifi_modules; then
-			continue
-		else
-			insmod /vendor_dlkm/lib/modules/$name
-		fi
-        fi
+  if [ -f /vendor_dlkm/lib/modules/$name ]; then
+    if grep -q $name $wifi_modules; then
+      continue
+    else
+      insmod /vendor_dlkm/lib/modules/$name
+    fi
+  fi
   done < $vendor_modules
 fi
 

@@ -129,11 +129,8 @@ on boot
     # backlight
     chown system system /sys/class/backlight/rk28_bl/brightness
     chown system system /sys/class/backlight/backlight/brightness
+    chown system system /sys/class/backlight/pwm-backlight/brightness
     
-    #add for cooling fan
-    chmod 0666 /sys/class/fan/mode
-    chmod 0666 /sys/class/fan/level
-    chmod 0666 /sys/class/fan/enable
     # for hdmi
     chown root system /sys/class/display/HDMI/enable
     chown root system /sys/class/display/HDMI/mode
@@ -147,8 +144,8 @@ on boot
     chmod 0664 /sys/class/graphics/fb0/bcsh
     chmod 0664 /sys/class/graphics/fb0/dsp_lut
 
-	chown system graphics /sys/class/graphics/fb0/scale
-	chmod 0664 /sys/class/graphics/fb0/scale
+    chown system graphics /sys/class/graphics/fb0/scale
+    chmod 0664 /sys/class/graphics/fb0/scale
 
     chown system system /sys/mali400_utility/utility
     chmod 0664 /sys/mali400_utility/utility
@@ -178,24 +175,24 @@ on boot
     chmod 0664 /sys/class/leds/net-green/brightness
     chown system system /sys/class/leds/net-red/brightness
     chmod 0664 /sys/class/leds/net-red/brightness
-    chown system system /sys/class/leds/red_led/brightness
-    chown system system /sys/class/leds/red_led/trigger
-    chown system system /sys/class/leds/red_ledr/timer
-    chmod 0664 /sys/class/leds/red_led/brightness
-    chmod 0664 /sys/class/leds/red_led/trigger
-    chmod 0664 /sys/class/leds/red_led/timer
-    chown system system /sys/class/leds/green_led/brightness
-    chown system system /sys/class/leds/green_led/trigger
-    chown system system /sys/class/leds/green_led/timer
-    chmod 0664 /sys/class/leds/green_led/brightness
-    chmod 0664 /sys/class/leds/green_led/trigger
-    chmod 0664 /sys/class/leds/green_led/timer
-    chown system system /sys/class/leds/blue_led/brightness
-    chown system system /sys/class/leds/blue_led/trigger
-    chown system system /sys/class/leds/blue_led/timer
-    chmod 0664 /sys/class/leds/blue_led/brightness
-    chmod 0664 /sys/class/leds/blue_led/trigger
-    chmod 0664 /sys/class/leds/blue_led/timer
+    chown system system /sys/class/leds/led_r/brightness
+    chown system system /sys/class/leds/led_r/trigger
+    chown system system /sys/class/leds/led_r/timer
+    chmod 0664 /sys/class/leds/led_r/brightness
+    chmod 0664 /sys/class/leds/led_r/trigger
+    chmod 0664 /sys/class/leds/led_r/timer
+    chown system system /sys/class/leds/led_g/brightness
+    chown system system /sys/class/leds/led_g/trigger
+    chown system system /sys/class/leds/led_g/timer
+    chmod 0664 /sys/class/leds/led_g/brightness
+    chmod 0664 /sys/class/leds/led_g/trigger
+    chmod 0664 /sys/class/leds/led_g/timer
+    chown system system /sys/class/leds/led_b/brightness
+    chown system system /sys/class/leds/led_b/trigger
+    chown system system /sys/class/leds/led_b/timer
+    chmod 0664 /sys/class/leds/led_b/brightness
+    chmod 0664 /sys/class/leds/led_b/trigger
+    chmod 0664 /sys/class/leds/led_b/timer
 
     chown root system /sys/class/graphics/fb0/map
     chmod 0664 /sys/class/graphics/fb0/map
@@ -258,7 +255,7 @@ on sys-boot-completed-set && property:persist.sys.zram_enabled=1
     swapon_all /vendor/etc/fstab_swap.ext${vendor.ext_ram}
 
 # for Internet adb
-on property:persist.internet_adb_enable=1
+on property:persist.internet_adb_enable=1 && property:sys.boot_completed=1
     setprop service.adb.tcp.port 5555
     restart adbd
 
@@ -324,7 +321,7 @@ service shutdownanim /system/bin/bootanimation shutdown
 
 service rk_store_keybox /vendor/bin/rk_store_keybox
     class main
-    oneshot		
+    oneshot
 
 #vts audio property
 on property:vts.native_server.on=1

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+XML文件SDK地址：
+sdk_path/hardware/rockchip/hwcomposer/drmhwc2/configs/HwcVrrWhiteList.xml
+
+XML文件设备端地址：
+/vendor/etc/HwcVrrWhiteList.xml
+-->
+<VrrWhiteList Version="1.0" Enable="true">
+    <!-- At present, VRR supports refresh rate adjustments only with a 1 Hz step size. -->
+    <refresh_rate>24.00</refresh_rate>
+    <refresh_rate>25.00</refresh_rate>
+    <refresh_rate>26.00</refresh_rate>
+    <refresh_rate>27.00</refresh_rate>
+    <refresh_rate>28.00</refresh_rate>
+    <refresh_rate>29.00</refresh_rate>
+    <refresh_rate>30.00</refresh_rate>
+    <refresh_rate>31.00</refresh_rate>
+    <refresh_rate>32.00</refresh_rate>
+    <refresh_rate>33.00</refresh_rate>
+    <refresh_rate>34.00</refresh_rate>
+    <refresh_rate>35.00</refresh_rate>
+    <refresh_rate>36.00</refresh_rate>
+    <refresh_rate>37.00</refresh_rate>
+    <refresh_rate>38.00</refresh_rate>
+    <refresh_rate>39.00</refresh_rate>
+    <refresh_rate>40.00</refresh_rate>
+    <refresh_rate>41.00</refresh_rate>
+    <refresh_rate>42.00</refresh_rate>
+    <refresh_rate>43.00</refresh_rate>
+    <refresh_rate>44.00</refresh_rate>
+    <refresh_rate>45.00</refresh_rate>
+    <refresh_rate>46.00</refresh_rate>
+    <refresh_rate>47.00</refresh_rate>
+    <refresh_rate>48.00</refresh_rate>
+    <refresh_rate>49.00</refresh_rate>
+    <refresh_rate>50.00</refresh_rate>
+    <refresh_rate>51.00</refresh_rate>
+    <refresh_rate>52.00</refresh_rate>
+    <refresh_rate>53.00</refresh_rate>
+    <refresh_rate>54.00</refresh_rate>
+    <refresh_rate>55.00</refresh_rate>
+    <refresh_rate>56.00</refresh_rate>
+    <refresh_rate>57.00</refresh_rate>
+    <refresh_rate>58.00</refresh_rate>
+    <refresh_rate>59.00</refresh_rate>
+    <refresh_rate>60.00</refresh_rate>
+</VrrWhiteList>

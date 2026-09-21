@@ -1,0 +1,30 @@
+
+key 103   DPAD_UP
+key 105   DPAD_LEFT
+key 106   DPAD_RIGHT
+key 108   DPAD_DOWN
+key 158   BACK
+key 403   MEDIA_NEXT
+key 402   MEDIA_PREVIOUS
+key 172   HOME
+#key 217   VOICE_ASSIST
+#key 217   SEARCH
+key 582   VOICE_ASSIST
+key 353   DPAD_CENTER
+key 113   VOLUME_MUTE
+key 114   VOLUME_DOWN
+key 115   VOLUME_UP
+key 116   POWER
+#key 156   SETTINGS
+key 156   PROG_BLUE
+#key 384   ALL_APPS
+key 384   PROG_RED
+key 362   MENU
+#key 240   PROFILE_SWITCH
+
+
+key usage 0x0c0079 F4
+key usage 0x0c007a F5
+key usage 0x0c0077 F6
+key usage 0x0c0078 F8
+

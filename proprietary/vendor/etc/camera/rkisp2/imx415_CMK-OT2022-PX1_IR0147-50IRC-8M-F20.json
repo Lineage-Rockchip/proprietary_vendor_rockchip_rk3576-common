@@ -12284,7 +12284,7 @@
 							"stAuto":	{
 								"sta":	{
 									"psfParam":	{
-										"sw_cacT_psfMap_path":	"CAC_imx415_CMK-OT2022-PX1_IR0147-50IRC-8M-F20/cac2_map_hw_3840x2160.bin",
+										"sw_cacT_psfMap_path":	"imx415_CMK-OT2022-PX1_IR0147-50IRC-8M-F20/cac2_map_hw_3840x2160.bin",
 										"hw_cacT_psfShift_bits":	2
 									},
 									"strgCenter":	{
@@ -37900,7 +37900,7 @@
 							"stAuto":	{
 								"sta":	{
 									"psfParam":	{
-										"sw_cacT_psfMap_path":	"CAC_imx415_CMK-OT2022-PX1_IR0147-50IRC-8M-F20/cac2_map_hw_3840x2160.bin",
+										"sw_cacT_psfMap_path":	"imx415_CMK-OT2022-PX1_IR0147-50IRC-8M-F20/cac2_map_hw_3840x2160.bin",
 										"hw_cacT_psfShift_bits":	2
 									},
 									"strgCenter":	{

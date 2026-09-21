@@ -1,0 +1,13 @@
+#on early-boot
+on post-fs-data
+    start pq-init
+
+on property:sys.rk.auth.aipq.success=1
+    start pq-init
+
+service pq-init /vendor/bin/pq_init
+    class hal
+    user root
+    group system
+    oneshot
+    disabled

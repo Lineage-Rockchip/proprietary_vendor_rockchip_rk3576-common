@@ -1,0 +1,40 @@
+#
+#  TZ MP1-m Air Mouse
+#
+
+key 0    BACK            # B_MENU (NO REMAP)
+key 172  MENU            # B_MIC (GUIDE)
+#key 87   HOME           # B_HOME (MEDIA_NEXT) # ERR
+key 127  HOME            # B_HOME (MEDIA_PAUSE)
+key 113  POWER           # B_POINTER (CTRL_LEFT)
+key 114  VOLUME_DOWN     # B_+
+key 115  VOLUME_UP       # B_-
+key 109  CHANNEL_DOWN    # B_P-
+key 104  CHANNEL_UP      # B_P+
+key 14   DEL             # B_DEL
+#DPAD//
+key 28   DPAD_CENTER     # OK | ENTER
+key 103  DPAD_UP
+key 108  DPAD_DOWN
+key 106  DPAD_RIGHT
+key 105  DPAD_LEFT
+#//DPAD
+#NPAD//
+key 42   SHIFT_LEFT      # For STAR and POUND
+key 2    1
+key 3    2
+key 4    3
+key 5    4
+key 6    5
+key 7    6
+key 8    7
+key 9    8
+key 10   9
+key 11   0
+#//NPAD
+#GPAD//
+key 21 BUTTON_Y          # B_P-
+key 30 BUTTON_A          # B_P+
+key 48 BUTTON_B          # B_TV
+key 45 BUTTON_X          # B_DEL
+#//GPAD
