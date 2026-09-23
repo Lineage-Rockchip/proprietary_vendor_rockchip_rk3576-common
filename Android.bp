@@ -3155,6 +3155,14 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
+prebuilt_apex {
+    name: "com.google.android.widevine.nonupdatable",
+    owner: "rockchip",
+    src: "proprietary/vendor/apex/com.google.android.widevine.nonupdatable.apex",
+    filename: "com.google.android.widevine.nonupdatable.apex",
+    soc_specific: true,
+}
+
 prebuilt_etc_xml {
     name: "android.hardware.camera.provider-V1-external-service.xml",
     owner: "rockchip",

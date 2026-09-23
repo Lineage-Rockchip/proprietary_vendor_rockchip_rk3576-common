@@ -463,6 +463,7 @@ PRODUCT_PACKAGES += \
     librockit_hw_hidl@1.0 \
     libwifi-hal \
     rockchip.hardware.rockit.hw@1.0 \
+    com.google.android.widevine.nonupdatable \
     android.hardware.camera.provider-V1-external-service.xml \
     android.hardware.camera.provider-V1-service.xml \
     android.hardware.gatekeeper-service.optee.xml \
