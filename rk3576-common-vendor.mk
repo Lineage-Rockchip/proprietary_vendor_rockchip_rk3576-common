@@ -442,7 +442,6 @@ PRODUCT_PACKAGES += \
     libwifi-hal-rtk-rockchip \
     libwifi-hal-skw-rockchip \
     libwpa_client \
-    rockchip.hardware.outputmanager@1.0 \
     libanr \
     camera.device-internal-impl-rk \
     libRkTeeGatekeeper \
